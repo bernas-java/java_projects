@@ -1,0 +1,26 @@
+// Simple game named Higer or Lower.
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class HigherOrLower {
+
+    public static void main(String[] args) {
+
+        Random random = new Random();
+        Scanner scanner = new Scanner(System.in);
+        int value = random.nextInt(10);
+        int inserted_value = -1;
+        while (value != inserted_value) {
+            System.out.println("Enter te number:");
+            inserted_value = scanner.nextInt();
+            if (inserted_value<value) {
+                System.out.println("The number you are looking for is higher than "+inserted_value);
+            }
+            else if (inserted_value>value) {
+                System.out.println("The number you are looking for is lower than "+inserted_value);
+            }
+        }
+        System.out.println("GG WP");
+    }
+}
