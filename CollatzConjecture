@@ -1,0 +1,28 @@
+public class CollatzConjecture {
+
+    public static void main(String[] args) {
+
+        //Define number
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Insert number");
+        int number = scanner.nextInt();
+        //Define how many times the loop has to repeat
+        System.out.println("How many numbers you would like to see");
+        int loop_length = scanner.nextInt();
+        //Check if number is odd or even
+        //Loop begins
+        for(int i=0;i<loop_length;i++) {
+            if (number%2 == 0) {
+                System.out.println("This number is even.");
+                number = number/2;
+                System.out.println(number);
+            }
+            //ODD
+            else {
+                System.out.println("This number is odd.");
+                number = number*3+1;
+                System.out.println(number);
+            }
+        }
+    }
+}
