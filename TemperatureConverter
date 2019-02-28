@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class TemperatureConverter {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("TEMPERATURE CONVERTER");
+        System.out.println("1.Celsius-Fahrenheit   2.Fahrenheit-Celsius");
+        int temperature_type = scanner.nextInt();
+        if(temperature_type > 2 || temperature_type < 0) {
+            int n = 0;
+            while(n == 0) {
+                System.out.println("1.Celsius-Fahrenheit   2.Fahrenheit-Celsius");
+                temperature_type = scanner.nextInt();
+                if (temperature_type == 1 || temperature_type == 2) {
+                    n = 1;
+                }
+            }
+        }
+        System.out.println("Enter the temperature you want to convert:");
+        double temperature = scanner.nextDouble();
+        if(temperature_type == 1) {
+            temperature = (temperature*9/5)+32;
+            temperature *= 100;
+            temperature = Math.round(temperature);
+            temperature /= 100;
+            System.out.println(temperature);
+        }
+        else if (temperature_type == 2) {
+            temperature = (temperature - 32)*5/9;
+            temperature *= 100;
+            temperature = Math.round(temperature);
+            temperature /= 100;
+            System.out.println(temperature);
+        }
+    }
+}
