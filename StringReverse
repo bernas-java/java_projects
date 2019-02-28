@@ -1,3 +1,5 @@
+//This program writes the entered word in reverse order
+
 import java.util.Scanner;
 
 public class StringReverse {
