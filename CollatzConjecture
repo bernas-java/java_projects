@@ -14,6 +14,7 @@ public class CollatzConjecture {
         // Check if number is odd or even
         // Loop begins
         for(int i=0;i<loop_length;i++) {
+            // EVEN
             if (number%2 == 0) {
                 System.out.println("This number is even.");
                 number = number/2;
