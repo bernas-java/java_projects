@@ -1,4 +1,4 @@
-// This program works just as toy named Magic Eight Ball
+// This program works just as toy named Magic Eight Ball.
 
 import java.util.Random;
 import java.util.Scanner;
