@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class StringReverse {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Insert string");
+        String string = scanner.next();
+        String reversed_string = "";
+        int i = string.length();
+        while (i>0) {
+            reversed_string = reversed_string+string.charAt(i-1);
+            i--;
+        }
+        System.out.println(reversed_string);
+    }
+}
