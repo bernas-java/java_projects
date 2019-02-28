@@ -1,0 +1,32 @@
+// This program finds the lowest number
+
+import java.util.Scanner;
+
+public class TheLowest {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("How many numbers you would like to enter?");
+        int tab_length = scanner.nextInt();
+        int tab[] = new int[tab_length];
+        for(int i=0;i<tab_length;i++) {
+            System.out.println("Enter "+(i+1)+" number");
+            int number = scanner.nextInt();
+            tab[i] = number;
+        }
+        int if_min_number = 0;
+        for(int i=0;i<tab.length;i++) {
+            int min_number=0;
+            for(int n=0;n<tab.length;n++) {
+                if(tab[i]>tab[n]) {
+                    min_number=1;
+                }
+            }
+            if(min_number==0) {
+                if_min_number = tab[i];
+            }
+        }
+        System.out.println("The lowest number is "+if_min_number+".");
+    }
+}
