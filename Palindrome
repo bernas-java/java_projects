@@ -1,0 +1,62 @@
+// Checks if number is Palindrome using methods
+
+import java.util.Scanner;
+
+public class Palindrome {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter number to check if it's palindrome.");
+        String Snum = scanner.next();
+        int num = Snum.length();
+        if (num%2 == 0) {
+            even(Snum);
+        }
+        else {
+            odd(Snum);
+        }
+    }
+    private static void even(String Snum) {
+        String L = "";
+        String P = "";
+        // Left side
+        for (int i = 0; i < Snum.length() / 2; i++) {
+            L = L + Snum.charAt(i);
+        }
+        // Right side
+        for(int i = Snum.length()/2;i<Snum.length();i++) {
+            P = P + Snum.charAt(i);
+        }
+        result(L,P,Snum.length());
+    }
+    private static void odd(String Snum) {
+        String L = "";
+        String P = "";
+        // Left side
+        for(int i=0;i<Snum.length()/2;i++) {
+            L = L+Snum.charAt(i);
+        }
+        // Right side
+        for(int i = Snum.length()/2+1;i<Snum.length();i++) {
+            P = P + Snum.charAt(i);
+        }
+        result(L,P,Snum.length());
+    }
+    private static void result(String L, String P, int length) {
+        String L_reversed = "";
+        int n=length/2;
+        while (n>0) {
+            L_reversed = L_reversed + L.charAt(n - 1);
+            n--;
+        }
+        int Left = Integer.parseInt(L_reversed);
+        int Right = Integer.parseInt(P);
+        if(Left == Right) {
+            System.out.println("This number is Palindrome.");
+        }
+        else {
+            System.out.println("This number is not Palindrome.");
+        }
+    }
+}
