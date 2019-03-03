@@ -1,0 +1,26 @@
+// Shorter version of Fibonacci script
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class FibonacciList {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        int number = scanner.nextInt();
+        List<Integer> lista = new ArrayList<>();
+        lista.add(1);
+        lista.add(1);
+        int n=2;
+        while (n<number) {
+            lista.add(lista.get(n-1)+lista.get(n-2));
+            n++;
+        }
+        for (Integer element : lista) {
+            System.out.println(element);
+        }
+
+    }
+}
